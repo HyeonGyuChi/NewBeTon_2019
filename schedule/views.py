@@ -9,8 +9,9 @@ def userlist(request) :
 def detail(request, user_id) : 
     select_user = get_object_or_404(User, pk = user_id)
     try : 
-        user_timetable = select_user.timetable_set.get().all()
-    
+        user_timetable = select_user.timetable_set.all()
+        print(user_timetable)
+    #user_timetable = select_user.timetable_set.all()
     except(KeyError, user_timetable.DoesNotExist) :
         return render(request, 'schedule/detail.html', {
             'user' : select_user,

@@ -1,2 +1,12 @@
 <h1>{{user}}</h1>
 <h1>{{timetable}}</h1>
+
+{% for subject in timetable %}
+    <h3>{{subject.id}}</h3>
+    <li>이름 = {{subject.user_id}}</li>
+    <li>과목명 = {{subject.subject_name}}</li>
+    <li>요일 = {{subject.day}}</li>
+    <li>시작시간 = {{subject.start_time}}</li>
+    <li>종료시간 = {{subject.end_time}}</li>
+    <br>
+{% endfor %}
