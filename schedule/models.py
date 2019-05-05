@@ -42,3 +42,12 @@ class TimeTable(models.Model) :
     
     #def __str__(self) : 
     #    return self.subject_name
+
+class Team(models.Model) : 
+    name = models.CharField(max_length = 20) # 프로젝트이름
+    a = models.IntegerField() # 참가자 a id
+    b = models.IntegerField() # 참가자 b id
+    c = models.IntegerField() # 참가자 c id 
+    d = models.IntegerField() # 참가자 d id 
+    
+    
